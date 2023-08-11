@@ -33,8 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 fetch(apiUrl1)
                     .then(response => response.json())
                     .then(data => {
-                        if (data.address && data.address.city) {
-                            selectedLocation = data.address.city;
+                        if (data.address) {
+                            if (data.address.town) {
+                                selectedLocation = data.address.town;
+                            } else if (data.address.city) {
+                                selectedLocation = data.address.city;
+                            }
                         } else {
                             selectedLocation = 'Town not found';
                         }
@@ -112,6 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     checkbox.addEventListener('change', function () {
         isCelsius = !isCelsius; // Toggle the temperature unit
         temperatureUnit = isCelsius ? '&#8451;' : '&#8457;';
-        
+
     });
 });
