@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const longitude = position.coords.longitude;
 
                 const apiUrl1 = `https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`;
-
+                console.log(apiUrl1);
                 fetch(apiUrl1)
                     .then(response => response.json())
                     .then(data => {
