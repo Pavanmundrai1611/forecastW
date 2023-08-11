@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 selectedLocation = data.address.city;
                             }
                         } else {
-                            selectedLocation = 'Town not found';
+                            selectedLocation = 'location not found';
                         }
                         document.querySelector('.location-input').innerHTML = `<h2>Selected location : ${selectedLocation}</h2>`;
                     })
