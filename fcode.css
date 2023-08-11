@@ -1,0 +1,303 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.main {
+    padding: 20px;
+}
+
+.weather-text {
+    padding: 20px;
+    font-family: 'Ultra', serif;
+}
+
+.weather-text,
+.location-input {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.inputb {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+.manuallocation {
+    background-color: #ecec29;
+    /* Blue background color */
+    color: black;
+    /* Text color */
+    border: 2PX solid black;
+    width: 200px;
+    height: 40px;
+}
+
+.manuallocation::placeholder {
+    font-size: 15px;
+    color: black;
+}
+
+.submitb {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.forecast-section {
+    margin-top: 20px;
+    display: grid;
+    justify-content: center;
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+
+.wimg {
+    margin-left: 57px;
+}
+
+/* Style for the button */
+button {
+    background-color: #f5f562f5;
+    /* Blue background color */
+    color: black;
+    /* Text color */
+    border: 2PX solid black;
+    /* Remove border */
+    padding: 10px 20px;
+    /* Add padding to the button */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    font-size: 16px;
+    /* Font size */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #241111;
+    /* Darker blue on hover */
+    color: aliceblue;
+}
+
+/* Optional: Add margin or spacing around the button */
+button+button {
+    margin-left: 10px;
+}
+
+
+.on-off-toggle {
+    top: 10px;
+    width: 56px;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.on-off-toggle__slider {
+    width: 110px;
+    height: 24px;
+    border: 2PX solid black;
+    display: block;
+    border-radius: 34px;
+    background-color: #f5f562f5;
+    /* Blue background color */
+    color: black;
+    transition: background-color 0.4s;
+}
+
+.on-off-toggle__slider:before {
+    content: '';
+    display: block;
+    border: 1PX solid black;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #949494;
+    bottom: 1px;
+    height: 18px;
+    left: 7px;
+    position: absolute;
+    transition: 0.4s;
+    width: 18px;
+    z-index: 5;
+    border-radius: 100%;
+}
+
+.on-off-toggle__slider:after {
+    display: block;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    content: 'Fahrenheit';
+    color: #0a0a0a;
+    padding-left: 26px;
+    transition: all 0.4s;
+}
+
+.on-off-toggle__input {
+    position: absolute;
+    opacity: 0;
+}
+
+.on-off-toggle__input:checked+.on-off-toggle__slider {
+    background-color: #000;
+}
+
+.on-off-toggle__input:checked+.on-off-toggle__slider:before {
+    transform: translateX(82px);
+}
+
+.on-off-toggle__input:checked+.on-off-toggle__slider:after {
+    content: 'Celcius';
+    color: #FFFFFF;
+    padding-left: 8px;
+}
+
+#forecast-section {
+    margin: 10px 40px;
+}
+
+#forecast-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* Start items from the left */
+    margin-top: 1rem;
+}
+
+.forecast-item {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    width: calc(33.33% - 1rem);
+    /* Adjust width based on available space */
+    box-sizing: border-box;
+    /* Include padding and margin in the width */
+}
+
+.forecast-item img {
+    margin-top: 0.5rem;
+    max-width: 40px;
+    /* Limit the image size */
+}
+
+/* Add this to your styles.css */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.forecast-container{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* Default styles for all screen sizes */
+/* ... (your existing CSS rules) ... */
+
+/* Media Query for Small Screens (e.g., smartphones) */
+@media screen and (max-width: 600px) {
+    .inputb {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .manuallocation {
+        width: 80%; /* Adjust the width */
+        max-width: 300px; /* Add a max-width to prevent excessive width */
+    }
+
+    .forecast-item {
+        padding: 0.3rem; /* Reduce padding */
+        margin: 0.3rem; /* Reduce margin */
+        width: calc(100% - 0.6rem); /* Adjust width to full width */
+    }
+
+    .forecast-item p {
+        font-size: 14px; /* Adjust font size for small screens */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .weather-text{
+        padding: 10px;
+    }
+    
+    .on-off-toggle {
+        margin-top: 10px;
+        left: -29px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem; /* Reduce font size by one level */
+    }
+
+    .submitb {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center; /* Center items horizontally */
+    }
+
+    /* Adjust other styles as needed */
+}
+

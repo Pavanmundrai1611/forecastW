@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fcode.css">
+    <title>Weather Forecast Condition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Ultra&display=swap"
+        rel="stylesheet">
+</head>
+
+<body
+    style="background-image: url(https://media.istockphoto.com/id/1128410927/photo/blue-sky-background-and-white-clouds-soft-focus-and-copy-space.webp?b=1&s=612x612&w=0&k=20&c=S0sU0kwydzCThr1WumVTziiiY11GIZBCC0mFYzxtSz0=);">
+    <header>
+        <nav>
+            <div class="logo">Logo</div>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">weather</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="weather-text">
+            <h2>Enter your location to get the weather forecast conditions of your area</h2>
+        </div>
+        <div class="inputb">
+            <input type="text" class="manuallocation" name="location" placeholder="Enter location manually">
+            <button id="automaticlocation">use my current location <img src="location-icon.png" class="ALlogo"
+                    alt=""></button>
+        </div>
+        <div class="location-input"></div>
+        <div class="submitb">
+            <button id="submit-button">Submit</button>
+
+            <div class="on-off-toggle">
+                <input class="on-off-toggle__input" type="checkbox" id="bopis" />
+                <label for="bopis" class="on-off-toggle__slider"></label>
+            </div>
+
+        </div>
+
+        <section class="forecast-container">
+            <section id="forecast-section">
+                <div id="loading"></div>
+            </section>
+        </section>
+
+    </main>
+
+    <script src="fcode.js"></script>
+</body>
+
+</html>
