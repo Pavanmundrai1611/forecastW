@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 fetch(apiUrl1)
                     .then(response => response.json())
                     .then(data => {
-                        if (data.address && data.address.town) {
-                            selectedLocation = data.address.town;
+                        if (data.address && data.address.city) {
+                            selectedLocation = data.address.city;
                         } else {
                             selectedLocation = 'Town not found';
                         }
